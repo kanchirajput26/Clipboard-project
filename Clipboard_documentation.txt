@@ -1,0 +1,50 @@
+                              DOCUMENTATION
+
+You will need 3 modules; tkinter, pyperclip, os
+For pyperclip you need to install it using pip --> "pip install pyperclip"
+
+*****TKINTER MODULE*****
+Firstly we created a root element which is a basic window with a title bar. The root element needs to be created before creating any other widget.
+
+The next command is the mainloop() function. This starts a never ending event loop, and the program stays in this loop until we close the main window.Once the mainloop function is hit, our window becomes visible, and the application goes into Tkinter’s event loop, which can handle events from the user (through callbacks) or the windowing system (such as redraw events). It also includes display updates, which is why our application will not be visible until the mainloop function is executed.
+
+
+*****FRAME WIDGET*****
+The first is the Frame widget. It is mainly used as a base widget for other widgets, and it can group the widgets into layouts. Think of it as a convenient place holder to keep everything else that we will build on our application. 
+
+
+*****BUTTON WIDGET*****
+The Button widget is used to add buttons in the application. These buttons can display text or images that convey the purpose of the buttons. You can attach a function or a method to a button which is called automatically when you click the button.
+Syntax-->
+w = Button ( master, option=value, ... )
+
+Parameters
+master − This represents the parent window.
+options − Here is the list of most commonly used options for this widget. These options can be used as key-value pairs separated by commas.
+1. Width of the button defnes the letters (if displaying text) or pixels (if displaying  an image)
+2. bg of the button defines the normal background color.
+3. fg of the buttons defines the normal foreground (text) color.
+4. command of the buttons defines function or method to be called when the button is clicked.
+
+
+*****CLIPBOARD FUNCTIONS*****
+
+--> save_copied_data()
+	It saves the current copied clipboard data into a text file named Save1
+	To prepend the data at the start of the file we are saving the original file as a variable then overriding the original file with the new data and appending the original file with previous saved data.
+
+--> saved_file()
+	To view the previous saved clipboard 
+
+--> clip_text()
+	We are using pyperclip module to paste the text into a file1 and opening that file witth the help of os module.
+
+--> clear_clipboard()
+	We are copying an empty string using pyperclip to clear the clipboard
+
+
+*****BUTTONS*****
+Button1- View Current Text --> It has the functionality of clip_text()
+Button2- Save Current Text --> It has the functionality of save_copied_data()
+Button3- View History      --> It has the functionality of saved_file()
+Button4- Clear Current Text--> It has the functionality of clear_clipboard()
